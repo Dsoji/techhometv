@@ -1,8 +1,29 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:tech_hometv/core/const/assets.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Wait for 3 seconds and then navigate to the home screen
+
+    Future.delayed(const Duration(seconds: 3), () {
+      if (mounted) {
+        // Perform navigation or other actions that require a valid context here.
+        Navigator.of(context)
+            .pushReplacementNamed('/home'); // Redirect to home page
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_hometv/features/screens/auth/login_screen.dart';
 import 'package:tech_hometv/features/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const SplashScreen(),
+      routes: {
+        '/home': (context) => const LoginScreen(), // Define the home page route
+      },
     );
   }
 }
