@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       if (mounted) {
         // Perform navigation or other actions that require a valid context here.
         Navigator.of(context)
-            .pushReplacementNamed('/home'); // Redirect to home page
+            .pushReplacementNamed('/login'); // Redirect to home page
       }
     });
   }

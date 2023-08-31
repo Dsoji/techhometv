@@ -22,12 +22,24 @@ class ReusedField extends StatelessWidget {
       height: height,
       width: width,
       child: TextField(
+        style: TextStyle(
+          fontSize: 10,
+          fontFamily: 'TimesNewRoman',
+          fontWeight: FontWeight.w700,
+          color: color,
+        ),
         decoration: InputDecoration(
+          focusColor: Colors.white,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            borderSide: BorderSide(color: color),
+          ),
           contentPadding:
               const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           labelText: hintText,
           labelStyle: TextStyle(
             fontSize: 10,
+            fontFamily: 'TimesNewRoman',
             fontWeight: FontWeight.w700,
             color: color,
           ),

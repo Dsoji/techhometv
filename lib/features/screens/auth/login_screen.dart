@@ -80,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                                 height: 34,
                                 color: Colors.white,
                                 icon: Icons.vpn_lock_outlined,
-                                label: 'COnnect Vpn',
+                                label: 'Connect Vpn',
                                 onPressed: () {},
                                 width: 105,
                               ),
@@ -119,11 +119,6 @@ class LoginScreen extends StatelessWidget {
                         children: [
                           gapH24,
                           gapH4,
-                          Text(
-                            'Container Size: ${scaledWidth.toStringAsFixed(2)} x ${scaledHeight.toStringAsFixed(2)}',
-                            style: const TextStyle(color: Colors.white),
-                          ),
-                          gapH20,
                           ReusedField(
                             hintText: 'Email',
                             color: Colors.white,
@@ -150,7 +145,10 @@ class LoginScreen extends StatelessWidget {
                             height: 34,
                             icon: Icons.person_add_alt_1,
                             label: 'ADD USER',
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .pushReplacementNamed('/home');
+                            },
                             width: 223,
                           ),
                         ],

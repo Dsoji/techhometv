@@ -32,17 +32,21 @@ class ReusableButton extends StatelessWidget {
         ),
         child: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
                 icon,
                 size: 14,
+                color: Colors.white,
               ),
               gapH8,
               Text(label,
                   style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white)),
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                    fontFamily: 'TimesNewRoman',
+                    color: Colors.white,
+                  )),
             ],
           ),
         ),
@@ -89,6 +93,7 @@ class OutlinButton extends StatelessWidget {
         ),
         child: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
                 icon,
@@ -98,7 +103,10 @@ class OutlinButton extends StatelessWidget {
               gapH8,
               Text(label,
                   style: TextStyle(
-                      fontSize: 12, fontWeight: FontWeight.w700, color: color)),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      color: color,
+                      fontFamily: 'TimesNewRoman')),
             ],
           ),
         ),
