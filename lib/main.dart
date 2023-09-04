@@ -4,6 +4,7 @@ import 'package:tech_hometv/app/techhome_tv.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.landscapeRight, DeviceOrientation.landscapeRight])
       .then((_) {

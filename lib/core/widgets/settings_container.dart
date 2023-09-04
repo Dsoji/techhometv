@@ -50,3 +50,26 @@ class SettingsContainer extends StatelessWidget {
     );
   }
 }
+
+class ImageContainer extends StatelessWidget {
+  final String image;
+
+  const ImageContainer({
+    super.key,
+    required this.image,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 116,
+      width: 78,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: AssetImage(image),
+          )),
+    );
+  }
+}

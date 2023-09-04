@@ -112,7 +112,7 @@ class LoginScreen extends StatelessWidget {
                         width: 2.0, // Width of the border
                       ),
                       borderRadius: BorderRadius.circular(15),
-                      color: Color(0x7f000000),
+                      color: const Color(0x7f000000),
                     ),
                     child: Center(
                       child: Column(

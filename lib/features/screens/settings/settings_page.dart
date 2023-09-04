@@ -3,6 +3,8 @@ import 'package:tech_hometv/core/const/assets.dart';
 import 'package:tech_hometv/core/const/gaps.dart';
 import 'package:tech_hometv/core/widgets/settings_container.dart';
 import 'package:tech_hometv/features/screens/settings/model/settings_model.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/ic.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
@@ -64,7 +66,14 @@ class SettingPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Image.asset(Assets.logo, height: 26, width: 102),
+                            GestureDetector(
+                              child: Image.asset(Assets.logo,
+                                  height: 26, width: 102),
+                              onTap: () {
+                                // Navigate back to the previous page
+                                Navigator.of(context).pushNamed('/home');
+                              },
+                            ),
                             const Spacer(),
                             const Text("SETTING",
                                 style: TextStyle(
@@ -72,7 +81,7 @@ class SettingPage extends StatelessWidget {
                                     fontWeight: FontWeight.w700,
                                     color: Colors.white,
                                     fontFamily: 'TimesNewRoman')),
-                            Spacer(),
+                            const Spacer(),
                             const Text("04:06 PM June 30,2021 ",
                                 style: TextStyle(
                                     fontSize: 11,
@@ -81,8 +90,8 @@ class SettingPage extends StatelessWidget {
                                     fontFamily: 'TimesNewRoman')),
                             IconButton(
                                 onPressed: () {},
-                                icon: const Icon(
-                                  Icons.search,
+                                icon: const Iconify(
+                                  Ic.outline_more_vert,
                                   color: Colors.white,
                                   size: 17,
                                 )),
@@ -107,7 +116,7 @@ class SettingPage extends StatelessWidget {
                                 image: settingMenu[index].image,
                                 title: settingMenu[index].title,
                                 height: scaledHeight,
-                                width: scaledHeight,
+                                width: scaledWidth,
                               );
                             },
                           ),
