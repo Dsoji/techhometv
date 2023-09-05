@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tech_hometv/core/const/assets.dart';
-import 'package:tech_hometv/core/const/gaps.dart';
 
-class MoviePage extends StatelessWidget {
-  const MoviePage({super.key});
+class ActorContainer extends StatelessWidget {
+  final String images;
+
+  const ActorContainer({super.key, required this.images});
 
   @override
   Widget build(BuildContext context) {
-    double containerWidth = 582.0; // Width of the container you desire
-    double containerHeight = 161.0;
+    double containerWidth = 101.0; // Width of the container you desire
+    double containerHeight = 160.0;
     // Get the screen size
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
@@ -20,25 +20,26 @@ class MoviePage extends StatelessWidget {
         SizedBox(
           width: scaledWidth,
           height: scaledHeight,
-          child: Row(
+          child: Column(
             children: [
-             SizedBox(
-              child: Column(
-                children: [
-                  Image.asset(height: 138, width: 106, Assets.r5),
-
-                ],
-              ),
-             ),
-             gapW24,
-             gapW20,
-             SizedBox(
-                child: Column(
-                  children: [
-                    
-                  ],
+              Container(
+                height: 144,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  image: DecorationImage(
+                      image: AssetImage(images), fit: BoxFit.contain),
                 ),
               ),
+              const Align(
+                alignment: Alignment.center,
+                child: Text("Actor Name",
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    )),
+              )
             ],
           ),
         )

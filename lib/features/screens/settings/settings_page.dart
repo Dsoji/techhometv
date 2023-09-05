@@ -66,14 +66,17 @@ class SettingPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            GestureDetector(
-                              child: Image.asset(Assets.logo,
-                                  height: 26, width: 102),
-                              onTap: () {
-                                // Navigate back to the previous page
+                            IconButton(
+                              onPressed: () {
                                 Navigator.of(context).pushNamed('/home');
                               },
+                              icon: const Icon(
+                                Icons.arrow_back,
+                                color: Colors.white,
+                              ),
                             ),
+                            gapW16,
+                            Image.asset(height: 26.1, width: 92, Assets.logo),
                             const Spacer(),
                             const Text("SETTING",
                                 style: TextStyle(

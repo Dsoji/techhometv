@@ -3,12 +3,11 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
 import 'package:tech_hometv/core/const/assets.dart';
 import 'package:tech_hometv/core/const/gaps.dart';
-import 'package:tech_hometv/features/screens/movies_section/model/artist_details.dart';
-import 'package:tech_hometv/features/screens/movies_section/widget/details_container.dart';
+import 'package:tech_hometv/features/screens/series_section/widget/widget_details_container.dart';
 
-class DetailsMoviePage extends StatelessWidget {
+class DetailsSeriesPage extends StatelessWidget {
   final String image;
-  const DetailsMoviePage({super.key, required this.image});
+  const DetailsSeriesPage({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +103,7 @@ class DetailsMoviePage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 200,
+                        height: 210,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,7 +126,7 @@ class DetailsMoviePage extends StatelessWidget {
                             gapW32,
                             //text details
                             SizedBox(
-                              width: 332,
+                              width: 450,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
@@ -190,9 +189,10 @@ class DetailsMoviePage extends StatelessWidget {
                                         child: const Center(
                                           child: Text("1h 50m",
                                               style: TextStyle(
-                                                fontSize: 11,
-                                                fontWeight: FontWeight.w400,
-                                              )),
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.white,
+                                                  fontFamily: 'TimesNewRoman')),
                                         ),
                                       )
                                     ],
@@ -206,10 +206,107 @@ class DetailsMoviePage extends StatelessWidget {
                                             fontWeight: FontWeight.w700,
                                           )),
                                       gapW18,
-                                      const Text("Drama",
+                                      const Text("Comedy / Crime / Drama",
                                           style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: 'TimesNewRoman'))
+                                    ],
+                                  ),
+                                  gapH8,
+                                  Row(
+                                    children: [
+                                      const Text("Plot:",
+                                          style: TextStyle(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                            fontFamily: 'TimesNewRoman',
+                                          )),
+                                      gapW18,
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          const Text(
+                                              "In publishing and graphic design, Lorem ipsum is a \nplaceholder text commonly used to demonstrate. Read more",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontFamily: 'TimesNewRoman')),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                width: 100,
+                                                height: 27,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            3),
+                                                    color: const Color(
+                                                        0xffff0000)),
+                                                child: const Center(
+                                                  child: Text("Resume - S4:E01",
+                                                      style: TextStyle(
+                                                        fontSize: 11,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Colors.white,
+                                                        fontFamily:
+                                                            'TimesNewRoman',
+                                                      )),
+                                                ),
+                                              ),
+                                              gapW8,
+                                              Container(
+                                                width: 100,
+                                                height: 27,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            3),
+                                                    color: const Color(
+                                                        0xffff0000)),
+                                                child: const Center(
+                                                  child: Text("Season - 4",
+                                                      style: TextStyle(
+                                                        fontSize: 11,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Colors.white,
+                                                        fontFamily:
+                                                            'TimesNewRoman',
+                                                      )),
+                                                ),
+                                              ),
+                                              gapW8,
+                                              Container(
+                                                width: 100,
+                                                height: 27,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            3),
+                                                    color: const Color(
+                                                        0xffff0000)),
+                                                child: const Center(
+                                                  child: Text("Watch Trailer",
+                                                      style: TextStyle(
+                                                        fontSize: 11,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: Colors.white,
+                                                        fontFamily:
+                                                            'TimesNewRoman',
+                                                      )),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      )
                                     ],
                                   ),
                                   gapH8,
@@ -233,22 +330,6 @@ class DetailsMoviePage extends StatelessWidget {
                                     ],
                                   ),
                                   gapH8,
-                                  Container(
-                                    width: 62,
-                                    height: 23,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(3),
-                                        color: const Color(0xffff0000)),
-                                    child: const Center(
-                                      child: Text("PLAY",
-                                          style: TextStyle(
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.white,
-                                            fontFamily: 'TimesNewRoman',
-                                          )),
-                                    ),
-                                  )
                                 ],
                               ),
                             ),
@@ -267,33 +348,26 @@ class DetailsMoviePage extends StatelessWidget {
                       ),
                       gapH8,
                       const Text(
-                          "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate. ",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                              fontFamily: 'TimesNewRoman')),
+                        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate. ",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            fontFamily: 'TimesNewRoman'),
+                      ),
                       gapH8,
-                      Center(
-                        child: Container(
-                          height: 160,
-                          width: double.infinity,
-                          padding: const EdgeInsets.symmetric(horizontal: 43),
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: artistDetails.length,
-                              itemBuilder: (context, index) {
-                                return Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                  child: ActorContainer(
-                                    images: artistDetails[index].image,
-                                  ),
-                                );
-                              },
-                            ),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 182,
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: ListView.builder(
+                            // physics: NeverScrollableScrollPhysics(r),
+                            scrollDirection: Axis.vertical,
+                            itemCount: 4,
+                            itemBuilder: (context, index) {
+                              return SeriesContainer();
+                            },
                           ),
                         ),
                       ),

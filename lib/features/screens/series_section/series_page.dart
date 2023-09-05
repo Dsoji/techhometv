@@ -4,11 +4,11 @@ import 'package:iconify_flutter/icons/ic.dart';
 import 'package:tech_hometv/core/const/assets.dart';
 import 'package:tech_hometv/core/widgets/settings_container.dart';
 import 'package:tech_hometv/features/screens/movies_section/model/movie_list_model.dart';
-import 'package:tech_hometv/features/screens/movies_section/movie_details.dart';
+import 'package:tech_hometv/features/screens/series_section/series_details.dart';
 import '../../../core/widgets/menu_widget.dart';
 
-class MoviePage extends StatelessWidget {
-  const MoviePage({super.key});
+class SeriesPage extends StatelessWidget {
+  const SeriesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,6 @@ class MoviePage extends StatelessWidget {
     // double screenHeight = MediaQuery.of(context).size.height;
     // double screenWidth = MediaQuery.of(context).size.width;
 
-    // double scaledWidth = screenWidth * (containerWidth / screenWidth);
     // double scaledHeight = screenHeight * (containerHeight / screenHeight);
 
     return Scaffold(
@@ -28,7 +27,7 @@ class MoviePage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: const Text("Movies",
+        title: const Text("Current Series",
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
@@ -110,7 +109,7 @@ class MoviePage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => DetailsMoviePage(
+                                  builder: (context) => DetailsSeriesPage(
                                     image: movieList[index].image,
                                   ),
                                 ));

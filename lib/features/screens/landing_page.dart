@@ -116,7 +116,9 @@ class LandingPage extends StatelessWidget {
                             ),
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).pushNamed('/series');
+                            },
                             child: Container(
                               width: scaledWidth,
                               height: scaledHeight,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_hometv/core/const/gaps.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../const/assets.dart';
 
@@ -9,20 +10,22 @@ class MenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
+      width: 250.w,
       color: Colors.black,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             width: double.infinity,
-            height: 60,
+            height: 60.h,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/home');
+                  },
                   icon: const Icon(
                     Icons.arrow_back,
                     color: Colors.white,
@@ -68,7 +71,7 @@ class MenuWidget extends StatelessWidget {
               children: [
                 Container(
                   width: double.infinity,
-                  height: 32,
+                  height: 32.h,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: const Row(
                     children: [
@@ -90,7 +93,7 @@ class MenuWidget extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 32,
+                  height: 32.h,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: const Row(
                     children: [
@@ -112,7 +115,7 @@ class MenuWidget extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 32,
+                  height: 32.h,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: const Row(
                     children: [
@@ -134,7 +137,7 @@ class MenuWidget extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 32,
+                  height: 32.h,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: const Row(
                     children: [
@@ -156,7 +159,7 @@ class MenuWidget extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 32,
+                  height: 32.h,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: const Row(
                     children: [
