@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tech_hometv/features/screens/liveTv/liveTv_page.dart';
 import 'package:tech_hometv/features/screens/movies_section/movie_details.dart';
 import 'package:tech_hometv/features/screens/movies_section/movies_landing_page.dart';
 import 'package:tech_hometv/features/screens/screens.dart';
@@ -50,6 +51,7 @@ class _MyAppState extends State<MyApp> {
               '/moviedetails': (context) => const DetailsMoviePage(
                     image: '',
                   ),
+              '/livetv': (context) => const LiveTvPage(),
             },
           );
         });

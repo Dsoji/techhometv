@@ -94,7 +94,9 @@ class LandingPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).pushNamed('/livetv');
+                            },
                             child: Container(
                               width: scaledWidth,
                               height: scaledHeight,
