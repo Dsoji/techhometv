@@ -366,7 +366,7 @@ class DetailsSeriesPage extends StatelessWidget {
                             scrollDirection: Axis.vertical,
                             itemCount: 4,
                             itemBuilder: (context, index) {
-                              return SeriesContainer();
+                              return const SeriesContainer();
                             },
                           ),
                         ),

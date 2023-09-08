@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
@@ -208,7 +210,7 @@ class LiveTvPage extends StatelessWidget {
                     gapH12,
                     SizedBox(
                       width: 750.h,
-                      child: Text(
+                      child: const Text(
                           "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
                           style: TextStyle(
                             fontSize: 9,
@@ -251,7 +253,7 @@ class LiveTvPage extends StatelessWidget {
                     gapH12,
                     SizedBox(
                       width: 750.h,
-                      child: Text(
+                      child: const Text(
                           "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
                           style: TextStyle(
                             fontSize: 9,

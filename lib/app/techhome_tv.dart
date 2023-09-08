@@ -7,7 +7,8 @@ import 'package:tech_hometv/features/screens/movies_section/movies_landing_page.
 import 'package:tech_hometv/features/screens/screens.dart';
 import 'package:tech_hometv/features/screens/series_section/series_page.dart';
 import 'package:tech_hometv/features/screens/settings/settings_page.dart';
-import 'package:tech_hometv/features/splash_screen.dart';
+
+import '../features/screens/auth/forgot_screen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -41,9 +42,11 @@ class _MyAppState extends State<MyApp> {
               //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
             ),
-            home: const SplashScreen(),
+            home: const LoginScreen(),
             routes: {
               '/login': (context) => const LoginScreen(),
+              '/signin': (context) => const SigninScreen(),
+              '/forgot': (context) => const ForgotScreen(),
               '/home': (context) => const LandingPage(),
               '/settings': (context) => const SettingPage(),
               '/movies': (context) => const MoviePage(),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "890077103568",
+    "project_id": "techhome-flutter",
+    "storage_bucket": "techhome-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890077103568:android:df9e01d87c7f37e9a0e5d5",
+        "android_client_info": {
+          "package_name": "com.example.tech_hometv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890077103568-3995dg0rf9qr31sdeajddtt1uhik8a7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzXrpO8veYLWzWrzAFdaP2CZbtjBz7tW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890077103568-3995dg0rf9qr31sdeajddtt1uhik8a7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
